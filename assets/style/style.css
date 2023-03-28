@@ -46,6 +46,7 @@ main header {
     display: flex;
     justify-content: center;
     margin-top: 62px;
+    align-items: center;
 }
 
 section h1 {
@@ -133,6 +134,9 @@ section p {
 
 .visible {
     display: block;
+}
+span {
+    color: #ffffff;
 }
 
 /* tablet tablet tablet */
