@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@100;400;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-green: #54e6af;
+    --gray: #2c344b;
+    --black: linear-gradient(0deg, #121725, #121725),
+        linear-gradient(0deg,
+            rgba(255, 255, 255, 0.098719),
+            rgba(255, 255, 255, 0.098719));
+    --light-gray: #5a668a;
+    --ultra-black: #121725;
+    --gray-white: #c2cbe5;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--ultra-black);
+    display: flex;
+    flex-direction: column;
+}
+
+.background {
+    background-image: url("/assets/mobile/image-host.jpg");
+    background-repeat: no-repeat;
+    background-color: var(--black);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.1);
+    mix-blend-mode: screen;
+    position: absolute;
+}
+
+main {
+    font-family: "Chivo", sans-serif;
+    padding: 0 24px 24px;
+}
+
+main header {
+    display: flex;
+    justify-content: center;
+    margin-top: 62px;
+}
+
+section h1 {
+    text-transform: uppercase;
+    margin-top: 57px;
+    font-style: normal;
+    font-size: 26px;
+    font-weight: 100;
+    line-height: 38px;
+    color: var(--light-green);
+    text-align: center;
+    filter: opacity(0.8);
+}
+
+section p {
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 25px;
+    color: var(--gray-white);
+    text-align: center;
+    filter: opacity(0.7);
+}
+
+.flex-wrapper {
+    margin-top: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.btn input {
+    padding: 9px 32px;
+    text-align: left;
+    background-color: var(--gray);
+    color: #ffffff;
+    opacity: 0.5;
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    border: none;
+    font-weight: bold;
+}
+
+.btn .btn-2 {
+    padding: 9px 109px;
+    background-color: var(--light-green);
+    color: var(--ultra-black);
+    border-radius: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+    border: none;
+    font-weight: bold;
+}
+
+.tablet {
+    display: none;
+}
+
+.error-message {
+    color: #fb3e3e;
+    margin-left: 30px;
+    margin-top: 8px;
+    font-size: 10px;
+    display: none;
+}
+
+.correct {
+    color: #54e6af;
+    font-weight: 400;
+    font-size: 10px;
+    margin-left: 20px;
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* tablet tablet tablet */
+
+@media (min-width: 768px) {
+    body {
+        background-color: #121725;
+        background-image: url("/assets/tablet/image-host.jpg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding-bottom: 257px;
+        position: relative;
+    }
+
+    .background {
+        background-image: none;
+    }
+
+    header img {
+        margin-right: 81%;
+        margin-top: -5%;
+    }
+
+    main .content {
+        width: 635px;
+        margin-top: 190px;
+        background-color: #121725;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .content h1 {
+        font-size: 48px;
+        line-height: 56px;
+        text-align: left;
+        padding-top: 93px;
+    }
+
+    main .content p {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+        width: 445px;
+        order: 0;
+    }
+
+    main .content .flex-wrapper {
+        justify-content: flex-start;
+        gap: 40px;
+        order: 3;
+    }
+
+    .btn input {
+        width: 437px;
+        padding: 14px 32px;
+    }
+
+    .btn {
+        position: relative;
+    }
+
+    .btn .btn-2 {
+        position: absolute;
+        left: 42%;
+        top: 5px;
+
+        padding: 9px 27px;
+    }
+
+    .tablet {
+        display: block;
+        position: absolute;
+        top: 920px;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-image: none;
+    }
+
+    main {
+        padding: 102px;
+        background-image: url(/assets/desktop/image-host.jpg);
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+
+    .content {
+        margin-left: 60px;
+        width: 723px;
+    }
+
+    main .content h1 {
+        font-size: 52px;
+        line-height: 62px;
+    }
+
+    .btn {
+        position: relative;
+    }
+
+    .btn .btn-2 {
+        /* top: -1.5px; */
+        left: 270px;
+        position: absolute;
+    }
+
+    .tablet {
+        left: 84%;
+        top: 755px;
+    }
+
+    .btn .btn-2:hover {
+        box-shadow: 0px 25px 20px -20px #54e6af7f;
+        background-color: #b3ffe2;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1024px) {
+    .btn .btn-2 {
+        position: absolute;
+        left: 42%;
+    }
+
+    .btn {
+        position: relative;
+    }
+}
